@@ -12,6 +12,6 @@ class SignupsTest < ApplicationSystemTestCase
 
     click_on 'Cadastrar'
 
-    assert_text "Cadastro realizado com sucesso"
+    assert_text "Usuario cadastrado com sucesso"
   end
 end
