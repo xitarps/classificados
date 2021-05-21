@@ -11,6 +11,31 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Cadastre-se", '/users/new' %>
+    </nav>
+
+    <% if notice %>
+      <p>
+        <%= notice %>
+      </p>
+    <% end %>
+    
+    <% if alert %>
+      <p>
+        <%= alert %>
+      </p>
+    <% end %>
+
+    
+    <% if logged_in? %>
+      <%= current_user.name %> | 
+      <%= link_to 'Deslogar', '/sessions/delete', method: :delete %>
+    
+    <% else %>
+      <%= link_to 'Logar-se', '/sessions/new' %>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
