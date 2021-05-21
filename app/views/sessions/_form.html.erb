@@ -1,0 +1,16 @@
+<%= form_with model: @user, url: '/sessions/new' , local: true  do |f| %>
+
+  <p>
+    <%= f.label :email, 'Email' %>
+    <%= f.text_field :email, type: 'email'  %>
+  </p>
+
+  <p>
+    <%= f.label :password, 'Senha' %>
+    <%= f.text_field :password, type: 'password'  %>
+  </p>
+
+  <p>
+    <%= f.submit 'Logar' %>
+  </p>
+<% end %>

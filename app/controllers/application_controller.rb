@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def require_user!
     unless logged_in?
       flash[:alert] = "Oops, voce tem que estar logado"
-      return redirect_to '/users/new'
+      return redirect_to '/sessions/new'
     end
   end
 

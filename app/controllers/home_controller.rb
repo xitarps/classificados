@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
-  def index ; end
+  before_action :require_user!
+
   def show ; end
 end

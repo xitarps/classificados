@@ -1,0 +1,25 @@
+<%= form_with model: user, url: '/users/new' , local: true  do |f| %>
+  <p>
+    <%= f.label :name, 'Nome' %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :email, 'Email' %>
+    <%= f.text_field :email, type: 'email'  %>
+  </p>
+
+  <p>
+    <%= f.label :password, 'Senha' %>
+    <%= f.text_field :password, type: 'password'  %>
+  </p>
+
+  <p>
+    <%= f.label :confirm_password, 'Confirme Senha' %>
+    <%= f.text_field :confirm_password , type: 'password' %>
+  </p>
+
+  <p>
+    <%= f.submit 'Cadastrar' %>
+  </p>
+<% end %>

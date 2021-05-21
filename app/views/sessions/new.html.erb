@@ -1,25 +1,5 @@
-<p>
-  <% if @user.errors.any? %>
-    <% @user.errors.full_messages.each do |message| %>
-      <%= message %>
-    <% end %>
-  <% end %>
-</p>
+<h2>Logar-se</h2>
 
+<%= render 'shared/errors', object: @user %>
 
-<%= form_with model: @user, url: '/sessions/new' , local: true  do |f| %>
-
-  <p>
-    <%= f.label :email, 'Email' %>
-    <%= f.text_field :email, type: 'email'  %>
-  </p>
-
-  <p>
-    <%= f.label :password, 'Senha' %>
-    <%= f.text_field :password, type: 'password'  %>
-  </p>
-
-  <p>
-    <%= f.submit 'Logar' %>
-  </p>
-<% end %>
+<%= render 'form', user: @user %>

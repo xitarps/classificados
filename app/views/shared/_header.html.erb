@@ -1,0 +1,12 @@
+<h1>Classificados</h1>
+
+<nav>
+  <% if logged_in? %>
+    <%= current_user.name %> | 
+    <%= link_to 'Deslogar', '/sessions/delete', method: :delete %>
+  
+  <% else %>
+    <%= link_to "Cadastre-se", '/users/new' %>
+    <%= link_to 'Logar-se', '/sessions/new' %>
+  <% end %>
+</nav>
