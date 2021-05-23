@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     if same_password?
       if @user.save 
         session[:user_id] = @user.id
+        NotificationMailer.welcome(@user.name, @user.email).deliver_later
         return redirect_to '/', notice: 'Usuario cadastrado com sucesso'
       end
     else

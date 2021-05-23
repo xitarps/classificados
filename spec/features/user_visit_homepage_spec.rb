@@ -5,7 +5,7 @@ RSpec.describe "User visit" do
     it 'successfully ' do
       visit root_path
 
-      expect(page).to have_content('Show - Classificados')  
+      expect(page).to have_content('Oops, voce tem que estar logado')  
     end
   end
 end
