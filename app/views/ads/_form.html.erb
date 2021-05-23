@@ -1,0 +1,18 @@
+<%= form_with model: ad, local: true  do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :price %>
+    <%= f.number_field :price, step: "any" %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

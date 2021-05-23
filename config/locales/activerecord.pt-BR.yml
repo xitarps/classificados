@@ -4,7 +4,7 @@ pt-BR:
       ad:
         title: "Título"
         description: "Descrição"
-        prince: "Preço"
+        price: "Preço"
       user:
         name: "Nome"
         email: "E-mail"

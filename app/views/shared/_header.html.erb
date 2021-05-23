@@ -3,6 +3,7 @@
 <nav>
   <% if logged_in? %>
     <%= current_user.name %> | 
+    <%= link_to 'New ad', new_ad_path %> | 
     <%= link_to 'Deslogar', '/sessions/delete', method: :delete %>
   
   <% else %>

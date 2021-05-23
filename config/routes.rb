@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/sessions/new', to: 'sessions#new'
   post '/sessions/new', to: 'sessions#create'
   delete '/sessions/delete', to: 'sessions#destroy'
+
+  resources :ads, only: %i[new create]
 end

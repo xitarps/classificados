@@ -1,2 +1,10 @@
 pt-BR:
-  hello: "Olá Mundo"
+  helpers:
+    submit:
+      login: "Entrar"
+      user:
+        create: 'criar usuario'
+        update: 'atualizar usuario'
+      ad:
+        create: 'criar anuncio'
+        update: 'atualizar anuncio'
